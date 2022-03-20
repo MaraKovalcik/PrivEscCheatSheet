@@ -1,0 +1,10 @@
++ ANY SCHEDULED TASKS I/O OPERATIONS?
+C:\ > schtasks /query /fo LIST /v > schtasks.txt
++ BINPATHS?
+SC.EXE
+
+
++ Time and our own Scheduled Tasks.
+time
+The current time is: 6:41:05.81
+at 06:42 /interactive "C:\Tools\sirenMaint.exe"

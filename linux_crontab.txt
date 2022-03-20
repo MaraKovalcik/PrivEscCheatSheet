@@ -1,0 +1,6 @@
+Cron.
+crontab –u root –l
+
+Look for unusual system-wide cron jobs:
+cat /etc/crontab
+ls /etc/cron.*

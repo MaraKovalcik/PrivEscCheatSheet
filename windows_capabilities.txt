@@ -1,0 +1,14 @@
++ ADMIN CAPABILITY?
+NET LOCALGROUP ADMINISTRATORS
++ PERMITTED TRAFFIC CAPABILITY???
+netsh advfirewall firewall show rule name=all
+netsh advfirewall firewall show rule name=inbound
+netsh advfirewall firewall show rule name=outbounD
++ FILE TRANSFER CAPABILITY???
+CERTUTIL?
+FTP?
+TFTP?
+VB?
+PS?
+SMB?
+NFS?

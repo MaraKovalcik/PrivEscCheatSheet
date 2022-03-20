@@ -1,0 +1,14 @@
+Tools:
+(Remember how I said to save a local copy of that systeminfo output?)
+https://github.com/AonCyberLabs/Windows-Exploit-Suggester
+
++ How do I cross-compile payloads for Windows on Linux, S1REN?
+--> Dude, check this out.
+apt-get install mingw-w64
+
++ Cross-Compilation Reference:
+# Ci686-w64-mingw32-gcc hello.c -o hello32.exe     
+# 32-bitx86_64-w64-mingw32-gcc hello.c -o hello64.exe    
+# 64-bit # C++i686-w64-mingw32-g++ hello.cc -o hello32.exe    
+# 32-bitx86_64-w64-mingw32-g++ hello.cc -o hello64.exe   # 64-bit
+

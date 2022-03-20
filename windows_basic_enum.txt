@@ -1,0 +1,60 @@
++ Who am I?
+whoami
+echo %username%
+
++ Privileges
+whoami /priv
+
++ List out Services.
+wmic service get name,startname
+
++ Print Nightmare?
+
++ Domain Box?
+Bloodhound? Sharphound?
+
++ Will the path to privilege escalation lie in a executable binary or service in Program Files? Is it listening on local only and thus we missed it from the outside scans?
+cd "C:\Program Files"
+DIR /A /O /Q
+
+cd "C:\Program Files (x86)"
+DIR /A /O /Q
+
++ What is my current user's privileges?
+net user someWindowsUser
+
++ What are other user's privileges?
+net users
+
++ Hash Collection:
+pg_dump.exe
+meterpreter > hashdump
+
+ntds.dit exfiltration.
+
++ Who's the Administrator(s) around here?
+net localgroup administrators
+
++ Might we be able to move laterally to them if they are Administrators?
+net user somePotentialAdminUser
+
++ Firewall Information?
+netsh firewall show state
+netsh firewall show config
+
++ Network Information (who am I connected to? can anything off of Loopback be forwarded out to 0.0.0.0?)
+netstat -anoy
+route print
+arp -A
+ipconfig /all
+
++ Cleartext Passwords in Files? Search for them.
+findstr /si password *.txt
+findstr /si password *.xml
+findstr /si password *.ini
+
++ Find all those password and credential strings in config files.
+dir /s pass == cred == vnc == .config
+
++ Find all passwords in all files...
+findstr /spin "password" .
